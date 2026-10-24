@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, ExternalLink, Copy, Check2 } from "lucide-react";
+import { X, ExternalLink, Copy, CheckCircle2 } from "lucide-react";
 
 const NOMINALS = [6000, 12000, 18000, 24000, 30000];
 
@@ -124,15 +124,14 @@ export function TrakteerModal({ onClose }: { onClose: () => void }) {
 
         <div className="space-y-3">
           <a
-            href={TRAKTEER_URL}
+            href={isValid && amount > 0 ? TRAKTEER_URL : "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 rounded-full bg-forest px-4 py-3 text-sm font-semibold text-ivory hover:bg-forest-deep transition disabled:opacity-60"
-            disabled={!isValid || amount === 0}
+            className={`w-full flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold text-ivory transition ${!isValid || amount === 0 ? "bg-forest/30 text-forest/50 cursor-not-allowed" : "bg-forest hover:bg-forest-deep"}`}
           >
             {isValid && amount > 0 ? (
               <>
-                <Check2 className="h-4 w-4" />
+                <CheckCircle2 className="h-4 w-4" />
                 Lanjutkan ke Trakteer
               </>
             ) : (
@@ -145,7 +144,7 @@ export function TrakteerModal({ onClose }: { onClose: () => void }) {
             className="w-full flex items-center justify-center gap-2 rounded-full border border-forest/10 px-4 py-2 text-sm font-semibold text-forest hover:bg-mint transition"
           >
             {copied ? (
-              <Check2 className="h-4 w-4 text-leaf" />
+              <CheckCircle2 className="h-4 w-4 text-leaf" />
             ) : (
               <Copy className="h-4 w-4" />
             )}

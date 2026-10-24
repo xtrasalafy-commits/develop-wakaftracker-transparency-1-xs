@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
-import { Download, GitHub } from "lucide-react";
+import { Download, GitBranch } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -13,7 +13,7 @@ export function SiteFooter() {
             untuk diaudit.
           </p>
           <div className="mt-6 flex items-center gap-3 rounded-full border border-gold/40 bg-gold/5 px-4 py-2.5 text-xs text-gold">
-            <GitHub className="h-4 w-4" />
+            <GitBranch className="h-4 w-4" />
             <span>Open Source oleh MZF · 2026</span>
           </div>
         </div>
