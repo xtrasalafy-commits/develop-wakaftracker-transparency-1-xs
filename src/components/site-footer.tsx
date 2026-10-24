@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import { Download, GitHub } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -11,6 +12,10 @@ export function SiteFooter() {
             Dashboard transparansi wakaf untuk nazhir dan wakif. Setiap dana, setiap batu, setiap laporan — terbuka
             untuk diaudit.
           </p>
+          <div className="mt-6 flex items-center gap-3 rounded-full border border-gold/40 bg-gold/5 px-4 py-2.5 text-xs text-gold">
+            <GitHub className="h-4 w-4" />
+            <span>Open Source oleh MZF · 2026</span>
+          </div>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Jelajah</p>
@@ -29,6 +34,20 @@ export function SiteFooter() {
             <br />
             nazhir@wakaftracker.id
           </p>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Unduh Sumber</p>
+          <div className="mt-4 flex flex-col gap-3">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-full border border-forest/15 px-4 py-2.5 text-sm font-semibold text-forest hover:bg-mint transition"
+            >
+              <Download className="h-4 w-4" />
+              Source code lengkap
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-ivory/50">

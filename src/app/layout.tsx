@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { FloatingTrakteerWidget } from "@/components/trakteer/floating-widget";
 import { getCurrentUser } from "@/lib/auth";
 import { ensureSeed } from "@/lib/ensure-seed";
 import "./globals.css";
@@ -26,6 +27,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <body className="antialiased">
         <SiteHeader user={user} />
         {children}
+        <FloatingTrakteerWidget />
         <SiteFooter />
       </body>
     </html>
