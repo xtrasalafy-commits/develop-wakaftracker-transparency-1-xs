@@ -3,7 +3,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["cgk"],
   "env": {
     "DATABASE_URL": "@neon_database_url",
     "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
