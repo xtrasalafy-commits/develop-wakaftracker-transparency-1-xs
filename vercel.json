@@ -2,12 +2,5 @@
   "buildCommand": "npm run db:push && next build --webpack",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "env": {
-    "DATABASE_URL": "@neon_database_url",
-    "CLOUDINARY_CLOUD_NAME": "@cloudinary_cloud_name",
-    "CLOUDINARY_UPLOAD_PRESET": "@cloudinary_upload_preset",
-    "RESEND_API_KEY": "@resend_api_key",
-    "RESEND_FROM": "@resend_from"
-  }
+  "framework": "nextjs"
 }
